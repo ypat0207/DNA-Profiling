@@ -1,0 +1,67 @@
+This vector analysis listed below is for database file small.txt and DNA file 1.txt
+
+Welcome to the DNA Profiling Application.
+Enter command or # to exit: load_db small.txt
+Loading database...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+No DNA loaded.
+
+No DNA has been processed.
+Enter command or # to exit: load_dna 1.txt
+Loading DNA...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+DNA loaded: 
+AAGGTAAGTTTAGAATATAAAAGGTGAGTTAAATAGAATAGGTTAAAATTAAAGGAGATCAGATCAGATCAGATCTATCTATCTATCTATCTATCAGAAAAGAGTAAATAGTTAAAGAGTAAGATATTGAATTAATGGAAAATATTGTTGGGGAAAGGAGGGATAGAAGG
+
+No DNA has been processed.
+Enter command or # to exit: process
+Processing DNA...
+Enter command or # to exit: display
+Database loaded: 
+Alice 2 8 3
+Bob 4 1 5
+Charlie 3 2 5
+
+DNA loaded: 
+AAGGTAAGTTTAGAATATAAAAGGTGAGTTAAATAGAATAGGTTAAAATTAAAGGAGATCAGATCAGATCAGATCTATCTATCTATCTATCTATCAGAAAAGAGTAAATAGTTAAAGAGTAAGATATTGAATTAATGGAAAATATTGTTGGGGAAAGGAGGGATAGAAGG
+
+DNA processed, STR counts:
+AGATC: 4 
+AATG: 1 
+TATC: 5 
+
+Enter command or # to exit: search
+Searching database...
+Found in database! DNA matches: Bob
+Enter command or # to exit: #
+
+*********************************************************
+ourvector<13DNAProcessing> stats:
+ # of vectors created:   4
+ # of elements inserted: 9
+ # of elements accessed: 180
+*********************************************************
+*********************************************************
+ourvector<c> stats:
+ # of vectors created:   1575
+ # of elements inserted: 135393
+ # of elements accessed: 137166
+*********************************************************
+*********************************************************
+ourvector<i> stats:
+ # of vectors created:   27
+ # of elements inserted: 54
+ # of elements accessed: 82
+*********************************************************
+
+There are total of 4 vectors there are created in DNAProcessing two of the vectors are created in struct named personName and STRNumbers(lines 19 and 20) and the other two vectors database and nameAndNumberDatabase are declared in line 318 and 320. when first command load_db is called by the user the elements and vector numbers will go up because we are going to be pushing data into vectors depending on the data and data type, it will store all the data from the database file as characters. After that ther user will enter display command and because of that display command all the data of DNA and Database will be ran through the ourvectors(STRs,DNA) where all the data is pushed as character and because of that the inserted elements data will go up significantlly. After that when user processes the DNA a new char vector is created called singleSTR(line 187), this is where the singleSTRs will be stored after processing the DNA through the database file, so the amount of elements inserted will go up. When user gives search command the function will compare the nameAndNumberDatabase with strCounter and if it has same size then it will return true and all the str character and database characters will be passed through and the elements inserted number will go up significantlly again because you are comparing one character with another character. when it comes to the integers the vectors that are created are mainly for storing the sizes of the STRs and lot of the counters for checking and comparisons.
